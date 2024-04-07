@@ -1,4 +1,4 @@
-const Buildings = require('../models/Buildings')
+const Buildings = require('../models/buildingModel')
 const mongoose = require('mongoose')
 
 //get all buildings

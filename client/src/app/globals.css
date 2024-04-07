@@ -76,6 +76,7 @@ label {
   padding-top: 20px;
   padding-left: 30px;
   padding-right: 30px;
+  margin: 10px;
 }
 
 .locationName{
@@ -100,6 +101,7 @@ label {
   background-color: white;
   border-radius: 10px;
   height: 50px;
+  padding: 5px;
 }
 
 /*submit ticket page*/
@@ -165,6 +167,7 @@ label {
   color: #274d24; /* Set label color */
 }
 
+
 textarea {
   width: calc(100% - 20px); /* Adjust the width of the textarea */
   height: 100px; /* Set textarea height */
@@ -210,18 +213,9 @@ textarea {
   border: 2px solid #7D9C7B;
 }
 
-p {
-  /* margin-top: 20px;
-  text-align: left;
-  color: #0f240d;
-  border: 2px solid #7D9C7B; 
-  border-radius: 5px;
-  padding: 5px 9px; */
 
-  margin: 20px 350px;
-  text-align: left;
-  color: #0f240d;
-  border: 2px solid #7D9C7B; 
-  border-radius: 5px;
-  padding: 5px 9px;
+
+.locations{
+  display: flex;
+  padding: 20px;
 }

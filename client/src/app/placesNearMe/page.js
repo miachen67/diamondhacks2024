@@ -26,20 +26,37 @@ const PlacesNearMe = () => {
             <ToggleView  />
             
             <h1>Places Near You</h1>
-            <Locations 
-            img = {'public/next.svg'} 
-            locationName = {"CSE Building"} 
-            rating = {"⭐⭐⭐⭐"}
-            specialFeatures = {"Ramps, elevators"}
-            />
+            <div className="locations">
+                <Locations 
+                img = {'public/next.svg'} 
+                locationName = {"CSE Building"} 
+                rating = {"⭐⭐⭐⭐⭐"}
+                specialFeatures = {"Low-slope ramps, Power-assisted doors, elevators, Accessible Washrooms"}
+                />
+                <Locations 
+                img = {'public/next.svg'} 
+                locationName = {"Franklin Antonio Hall"} 
+                rating = {"⭐⭐⭐⭐"}
+                specialFeatures = {"Power-assisted doors, elevators, Low-slope ramps"}
+                />
+                <Locations 
+                img = {'public/next.svg'} 
+                locationName = {"CSE Building"} 
+                rating = {"⭐⭐"}
+                specialFeatures = {"Power-assisted doors, elevators"}
+                />
+            </div>
 
+            
+            {/*
+            
             <div className ="buildings">
                 {buildings && buildings.map((building) => (
                     console.log(building.buildingName)
                     //<BuildingDetails key={building._id} building ={building} />
                     //<p key={building._id}> {building.buildingName} </p>
                 ))}
-            </div>
+                </div>*/}
         </div>
     );
 }

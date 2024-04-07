@@ -1,18 +1,21 @@
 import Image from "next/image";
-import img from '../../../public/next.svg'
+import Link from "next/link";
 
 const Locations = ({img, locationName, rating, specialFeatures}) => {
     return (  
         <div className="locationCard">
-            <div className="imageCard">
-                <Image 
-                src = {img} 
-                alt={"Image of Location next"} 
-                width = {300}
-                height = {100}
-                className="imageCard"
-                />
-            </div>
+            <Link href = "/submitTicket">
+                <div className="imageCard">
+                    <Image 
+                    src = {img} 
+                    alt={"Image of Location next"} 
+                    width = {300}
+                    height = {100}
+                    className="imageCard"
+                    />
+                </div>
+            </Link>
+
             <div className="locationName">
                 <p>{locationName}</p>
             </div>

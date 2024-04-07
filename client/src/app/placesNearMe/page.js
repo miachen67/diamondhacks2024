@@ -2,7 +2,8 @@
 
 import ToggleView from "../components/ToggleView";
 import Locations from "../components/Locations";
-import {useEffect, useState} from 'react'
+import {useEffect, useState} from 'react';
+import BuildingDetails from '../components/BuildingDetails'
 
 const PlacesNearMe = () => {
 
@@ -31,7 +32,8 @@ const PlacesNearMe = () => {
             />
             <div className ="buildings">
                 {buildings && buildings.map((building) => (
-                    <p key = {building._id}>{building.buildingName}</p>
+                    <BuildingDetails key={building._id} newBuilding ={building} />
+                    // <p key = {building._id}>{building.buildingName}</p>
                 ))}
             </div>
         </div>

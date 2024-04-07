@@ -10,7 +10,15 @@ body{
 
 .button{
   background-color: #D2E64F;
-  border-radius: 15px;
+  border-radius: 5px;
+  border: none;
+  margin: 10px;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #a9be23;
 }
 
 /*TOGGLE VIEW CSS*/
@@ -117,8 +125,9 @@ label {
   
 }
 
+/*home*/
 .container {
-  display: flex;
+  margin-top: 20px;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -126,4 +135,8 @@ label {
 
 .content {
   text-align: center;
+}
+
+#centerButton {
+  margin-top: 100px;
 }

@@ -130,13 +130,16 @@ const SubmitTicket = () => {
 
 
                 {/* <button type ="submit" className="button" id="ticketSubmit">Submit</button> */}
-                <Link href = "/placesNearMe">
-                <button className='button' id="homeButton">Submit</button>
-                </Link>
+                <div className="submitTicketButtonsWrapper">
+                    <Link href = "/placesNearMe">
+                    <button className='button' id="homeButton">Submit</button>
+                    </Link>
+                    
+                    <Link href = "/homepage">
+                    <button className='button' id="homeButton">Home</button>
+                    </Link>
+                </div>
                 
-                <Link href = "/homepage">
-                <button className='button' id="homeButton">Home</button>
-                </Link>
                 
             </form>
 

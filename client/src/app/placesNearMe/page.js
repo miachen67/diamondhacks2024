@@ -4,6 +4,9 @@ import ToggleView from "../components/ToggleView";
 import Locations from "../components/Locations";
 import {useEffect, useState} from 'react';
 import BuildingDetails from '../components/BuildingDetails'
+import csebuilding from '../../../public/cse-building.jpg'
+import fah from '../../../public/FAH.jpg'
+import bistro from '../../../public/bistro.jpg'
 
 const PlacesNearMe = () => {
 
@@ -22,22 +25,39 @@ const PlacesNearMe = () => {
         fetchBuildings();
     }, []);
     return (  
-        <div>
-            <ToggleView  />
-            
+        <div className="nearMePage">            
             <h1>Places Near You</h1>
-            <Locations 
-            img = {'public/next.svg'} 
-            locationName = {"CSE Building"} 
-            rating = {"⭐⭐⭐⭐"}
-            specialFeatures = {"Ramps, elevators"}
-            />
+            <div className="locations">
+                <Locations 
+                img = {csebuilding} 
+                locationName = {"CSE Building"} 
+                rating = {"⭐⭐⭐⭐⭐"}
+                specialFeatures = {"Low-slope ramps, Power-assisted doors, elevators, Accessible Washrooms"}
+                />
+                <Locations 
+                img = {fah} 
+                locationName = {"Franklin Antonio Hall"} 
+                rating = {"⭐⭐⭐⭐"}
+                specialFeatures = {"Power-assisted doors, elevators, Low-slope ramps"}
+                />
+                <Locations 
+                img = {bistro} 
+                locationName = {"Bistro Dining Hall"} 
+                rating = {"⭐⭐"}
+                specialFeatures = {"Power-assisted doors, elevators"}
+                />
+            </div>
+
+
+            {/*
+            
             <div className ="buildings">
                 {buildings && buildings.map((building) => (
-                    <BuildingDetails key={building._id} building ={building} />
-                    // <p key = {building._id}>{building.buildingName}</p>
+                    console.log(building.buildingName)
+                    //<BuildingDetails key={building._id} building ={building} />
+                    //<p key={building._id}> {building.buildingName} </p>
                 ))}
-            </div>
+                </div>*/}
         </div>
     );
 }

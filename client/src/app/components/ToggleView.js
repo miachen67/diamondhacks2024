@@ -12,7 +12,7 @@ const ToggleView = ({ onClick }) => {
 
     return ( 
         <main>
-            <button onClick={handleClick}>{isCardView ? 'Card View' : 'Map View'}</button>
+            <button className="button" onClick={handleClick}>{isCardView ? 'Card View' : 'Map View'}</button>          
         </main>
     );
 }

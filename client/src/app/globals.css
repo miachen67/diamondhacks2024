@@ -247,6 +247,8 @@ textarea {
   padding: 20px 50px;
 }
 
-.submitTicketWrapper{
-  padding: 50px;
+#homeButton {
+  margin-top: 15px;
+  width: 75px;
+  padding: 10px;
 }

@@ -1,5 +1,6 @@
 'use client'
 // import {useClient} from 'next/client';
+import Link from 'next/link';
 import SubmitTicketButton from "@/app/components/PlacesNearMeButton";
 import {useState} from 'react';
 // import { useRouter } from 'next/router';
@@ -129,6 +130,11 @@ const SubmitTicket = () => {
 
 
                 <button type ="submit" className="button" id="ticketSubmit">Submit</button>
+                
+                <Link href = "/homepage">
+                <button className='button' id="homeButton">Home</button>
+                </Link>
+                
             </form>
 
             

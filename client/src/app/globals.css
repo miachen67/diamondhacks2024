@@ -19,7 +19,7 @@ body{
   border: 1px solid #ccc;
   border-radius: 30px;
   display: inline-block;
-  padding: 20px 0;
+  padding: 10px 0;
   position: relative;
 }
 
@@ -28,7 +28,7 @@ input[type=radio] {
 }
 
 label {
-  width: 150px;
+  width: 100px;
   display: inline-block;
   text-align: center;
   z-index: 5;
@@ -37,13 +37,14 @@ label {
 }
 
 .selector{
-  height: 55px;
-  width: 150px;
+  height: 35px;
+  width: 100px;
   background: #D2E64F;
   border-radius: 30px;
   position: absolute; 
-  top: 2px;
-  left: 2px;
+  top: 50%; /* Adjust the vertical position */
+  transform: translateY(-50%);
+  /* left: 50px; */
   z-index: 1;
   transition: left .25s ease-in-out;
 }
@@ -53,7 +54,7 @@ label {
 }
 
 .map-view:checked ~ .selector {
-  left: 150px; /*width of our label*/
+  left: 100px; /*width of our label*/
 }
 /*end of toggle view button css*/
 

@@ -1,7 +1,9 @@
 import './globals.css'
-import { Figtree } from 'next/font/google'
+import { Playfair_Display } from 'next/font/google'
+// import { Helvetica } from 'next/font/google'
 
-const figtree = Figtree({ subsets: ['latin'] })
+const playfair = Playfair_Display({ subsets: ['latin'] })
+// const helvetica = Helvetica({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,7 +13,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={figtree.className}>{children}</body>
+      <body className={playfair.className}>{children}</body>
+      {/* <body className={helvetica.className}>{children}</body> */}
     </html>
   )
 }

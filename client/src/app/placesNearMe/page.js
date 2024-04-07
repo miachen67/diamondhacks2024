@@ -33,7 +33,7 @@ const PlacesNearMe = () => {
             />
             <div className ="buildings">
                 {buildings && buildings.map((building) => (
-                    <BuildingDetails key={building._id} newBuilding ={building} />
+                    <BuildingDetails key={building._id} building ={building} />
                     // <p key = {building._id}>{building.buildingName}</p>
                 ))}
             </div>

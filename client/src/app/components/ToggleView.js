@@ -12,8 +12,6 @@ const ToggleView = ({ onClick }) => {
 
     return ( 
         <main>
-            {/* <button className="button" onClick={handleClick}>{isCardView ? 'Card View' : 'Map View'}</button> */}
-
             <div className = "toggle">
                 <input type="radio" name="toggle" value="Card View" className="card-view" id="card-view" />
                 <label for="card-view">Card View</label>

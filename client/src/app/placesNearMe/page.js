@@ -6,7 +6,8 @@ import Locations from "../components/Locations";
 const PlacesNearMe = () => {
     return (  
         <div>
-            <ToggleView onClick={() => console.log("Button clicked!")} />
+            <ToggleView  />
+            
             <h1>Places Near You</h1>
             <Locations 
             img = {'public/next.svg'} 

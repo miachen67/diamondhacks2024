@@ -12,6 +12,7 @@ const PlacesNearMe = () => {
             img = {'public/next.svg'} 
             locationName = {"CSE Building"} 
             rating = {"5/5"}
+            specialFeatures = {"Ramps, elevators"}
             />
         </div>
     );

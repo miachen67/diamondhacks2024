@@ -6,18 +6,19 @@ import {useEffect, useState} from 'react'
 
 const PlacesNearMe = () => {
 
-    const[buildings, setBuildings] = useState (null)
+    const[buildings, setBuildings] = useState (null);
+
     useEffect(() =>{
-        const fetchBuildings = async () =>{
-            const response = await fetch('/api/buildings')
-            const json = await response.json()
+        const fetchBuildings = async () => {
+            const response = await fetch('http://localhost:4000/api/buildings');
+            const json = await response.json();
 
             if (response.ok){
-                setBuildings(json)
+                setBuildings(json);
             }
         }
-        fetchBuildings()
-    }, [])
+        fetchBuildings();
+    }, []);
     return (  
         <div>
             <ToggleView  />

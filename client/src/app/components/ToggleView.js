@@ -1,7 +1,7 @@
-const ToggleView = () => {
+const ToggleView = ({ text, onClick }) => {
     return ( 
         <main>
-            
+            <button onClick={onClick}>Hello</button>
         </main>
     );
 }

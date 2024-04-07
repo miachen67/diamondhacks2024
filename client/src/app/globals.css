@@ -1,0 +1,11 @@
+body{
+  background-color: #F2F5DE;
+}
+
+.locationCard{
+  width: 25vw;
+  height: 50vh;
+  background-color: #D2E64F;
+  border-radius: 20px;
+  margin: 5vh;
+}

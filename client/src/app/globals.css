@@ -114,6 +114,16 @@ label {
 
 .form-text{
   margin-top:10px;
-  font-weight: 10;
+  
+}
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content {
+  text-align: center;
 }

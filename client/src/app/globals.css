@@ -10,7 +10,17 @@ body{
 
 .button{
   background-color: #D2E64F;
-  border-radius: 15px;
+  border-radius: 5px;
+  border: none;
+  /* margin: 10px; */
+  padding: 10px 15px;
+  font-weight: bold;
+  color: #0f240d;
+  font-family: "Source_Sans_Pro", sans-serif;
+}
+
+.button:hover {
+  background-color: #a9be23;
 }
 
 /*TOGGLE VIEW CSS*/
@@ -117,13 +127,43 @@ label {
   
 }
 
+/*home*/
 .container {
-  display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 60vh;
+  display: flex;
 }
 
 .content {
   text-align: center;
+}
+
+#centerButton {
+  margin-top: 5vh;
+  /* margin-left: 25%; */
+  transform: translateX(-50%, -50%);
+  font-size: 20px;
+  padding: 20px 50px;
+}
+
+.titleText {
+  color: #274d24;
+  border: 2px solid #7D9C7B;
+}
+
+p {
+  /* margin-top: 20px;
+  text-align: left;
+  color: #0f240d;
+  border: 2px solid #7D9C7B; 
+  border-radius: 5px;
+  padding: 5px 9px; */
+
+  margin: 20px 350px;
+  text-align: left;
+  color: #0f240d;
+  border: 2px solid #7D9C7B; 
+  border-radius: 5px;
+  padding: 5px 9px;
 }

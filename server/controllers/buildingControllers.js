@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 //get all buildings
 const getBuildings = async (req,res) => {
     const buildings = await Buildings.find({}).sort({createdAt: -1})
-
+    res.setHeader('Access-Control-Allow-Origin', '*')
     res.status(200).json(buildings)
 }
 

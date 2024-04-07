@@ -3,7 +3,7 @@ const BuildingDetails =({building}) =>{
         <div className="building-details">
             <h4>{building.buildingName}</h4>
             <p> Location: {building.address}</p>
-            <p><strong>Accessibility:</strong>{building.accessibility}</p>
+            <p>Accessibility:{building.accessibility}</p>
             <p>{building.createdAt}</p>
         </div>
     )

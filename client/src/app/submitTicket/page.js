@@ -35,45 +35,34 @@ const SubmitTicket = () => {
     }
     return ( 
         <main>
-            <div className="heading-textbox-container">
-                <h1>Submit a new ticket</h1>
-            </div>
+            <h1 className="headingBox">Submit a new ticket</h1>
+
             <form onSubmit={handleSubmit}>
-                <div className="form-text">
-                    <label>Building Name:</label>
-                </div>
-                <div className="textbox-container">
+                
+                <div className="form-group">
+                    <label className="ticketLabel">Building Name:</label>
                     <input
-                        type="text"
-                        required
-                        value={buildingName}
-                        // onChange={(e)=> setBuildingName(e.target.value)}
-                        onChange ={handleBuildingNameChange}
-                        style={{ backgroundColor: 'transparent',border:"transparent", outline:"none" }}
-                        
-                    />
-                </div>
-                {/* <input
                     type="text"
                     required
                     value={buildingName}
-                    // onChange={(e)=> setBuildingName(e.target.value)}
-                    onChange ={handleBuildingNameChange}
-                    
-                /> */}
-                <p>{'\n'}</p>
+                    onChange={handleBuildingNameChange}
+                    className="ticketInput"
+                    />
+                </div>
                 
-                <label>Address:</label>
-                <input
+                <div className="form-group">
+                    <label className="ticketLabel">Address:</label>
+                    <input
                     type="text"
                     required
                     value={address}
-                    // onChange={(e)=> setBuildingName(e.target.value)}
-                    onChange ={handleAddressChange}
-                />
-                <p>{'\n'}</p>
-                <h3>Submit all that Apply</h3> 
-                <p>{'\n'}</p>   
+                    onChange={handleAddressChange}
+                    className="ticketInput"
+                    />
+                </div>  
+
+                <h3 className="headingBox2">Click all that Apply:</h3> 
+
                 <input
                     type="checkbox"
                     id="checkbox1"
@@ -81,8 +70,8 @@ const SubmitTicket = () => {
                     checked={checkBoxes.checkbox1 || false}
                     onChange={handleCheckBoxesChange}
                 />
-                <label>Low-Slope Ramps</label>
-                <p>{'\n'}</p>   
+                <label className="ticketLabel" id="smaller">Low-Slope Ramps</label>
+
                 <input
                     type="checkbox"
                     id="checkbox2"
@@ -90,8 +79,8 @@ const SubmitTicket = () => {
                     checked={checkBoxes.checkbox2 || false}
                     onChange={handleCheckBoxesChange}
                 />
-                <label>Power-assisted Doors</label>
-                <p>{'\n'}</p>   
+                <label className="ticketLabel" id="smaller">Power-assisted Doors</label>
+              
                 <input
                     type="checkbox"
                     id="checkbox3"
@@ -99,8 +88,8 @@ const SubmitTicket = () => {
                     checked={checkBoxes.checkbox3 || false}
                     onChange={handleCheckBoxesChange}
                 />
-                <label>Elevators</label>
-                <p>{'\n'}</p>   
+                <label className="ticketLabel" id="smaller">Elevators</label>
+                   
                 <input
                     type="checkbox"
                     id="checkbox3"
@@ -108,15 +97,15 @@ const SubmitTicket = () => {
                     checked={checkBoxes.checkbox3 || false}
                     onChange={handleCheckBoxesChange}
                 />
-                <label>Accessible Washrooms</label>
-                <p>{'\n'}</p>
-                <label>Issues:</label>
+                <label className="ticketLabel" id="smaller">Accessible Washrooms</label>
+                
+                <label className="ticketLabel" id="smaller">Issues:</label>
                 <textarea
                     required
                     value={issues}
                     onChange={(e)=> setIssues(e.target.value)}
                 ></textarea>
-                <button type ="submit" className="button">Submit</button>
+                <button type ="submit" className="button" id="ticketSubmit">Submit</button>
             </form>
 
             

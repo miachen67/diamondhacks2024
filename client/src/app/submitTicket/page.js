@@ -1,6 +1,6 @@
 'use client'
 // import {useClient} from 'next/client';
-import SubmitTicketButton from "@/app/components/SubmitTicketButton";
+import SubmitTicketButton from "@/app/components/PlacesNearMeButton";
 import {useState} from 'react';
 // import { useRouter } from 'next/router';
 

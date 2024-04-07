@@ -1,4 +1,5 @@
-const Buildings = require('.../models/Buildings')
+const Buildings = require('../models/Buildings')
+const mongoose = require('mongoose')
 
 //get all buildings
 const getBuildings = async (req,res) => {
@@ -11,6 +12,10 @@ const getBuildings = async (req,res) => {
 const getBuilding = async(req,res) =>{
     const {id} = req.params
 
+    if (!mongoose.Types.ObjectId.isValid(id)){
+        return res.status(404).json({error: "No building"})
+    }
+
     const building = await Buildings.findById(id)
 
     if (!building) {
@@ -22,24 +27,56 @@ const getBuilding = async(req,res) =>{
 
 //create a new building
 const createBuilding = async (req,res) => {
-    const{building, address, accesssibility} = req.body
+    const{buildingName, address, accessibility} = req.body
 
   try{
-    const building = await Buildings.create()
-    res.status(200).json(workout)
+    const newBuilding = await Buildings.create({buildingName,address,accessibility})
+    res.status(200).json(newBuilding)
   }catch(error){
-    req.status(400).json ({error: error.message})
+    res.status(400).json ({error: error.message})
   }
 }
 
 //delete a building
+const deleteBuilding = async (req, res) => {
+    const {id}= req.params
 
+    if (!mongoose.Types.ObjectId.isValid(id)){
+        return res.status(404).json({error: "No building"})
+    }
+
+    const building = await Buildings.findOneAndDelete({_id: id})
+
+    if (!building) {
+        return res.status(400).json({error:'No such building'})
+    }
+
+    res.status(200).json(building)
+}
 
 //update a building
+const updateBuilding = async (req, res) =>{
+    const {id}= req.params
 
+    if (!mongoose.Types.ObjectId.isValid(id)){
+        return res.status(404).json({error: "No building"})
+    }
 
-module.export = {
+    const building = await Buildings.findOneAndUpdate({_id:id},{
+        ...req.body
+    })
+
+    if (!building) {
+        return res.status(400).json({error:'No such building'})
+    }
+
+    res.status(200).json(building)
+}
+
+module.exports = {
     getBuildings,
     getBuilding,
-    createBuilding
+    createBuilding,
+    deleteBuilding,
+    updateBuilding
 }

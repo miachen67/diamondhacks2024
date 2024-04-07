@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import SubmitTicket from './submitTicket/page'
-import SubmitTicketButton from "@/app/components/SubmitTicketButton";
+import SubmitTicketButton from '@/app/components/SubmitTicketButton';
+import PlacesNearMe from './placesNearMe/page';
+import PlacesNearMeButton from '@/app/components/PlacesNearMeButton';
 
 
 export default function Home() {
@@ -21,7 +23,10 @@ export default function Home() {
           </p>
             <SubmitTicketButton />
           
-        </div>    
+  
+        <PlacesNearMeButton />
+        
+      </div>    
     </main>
   )
 }

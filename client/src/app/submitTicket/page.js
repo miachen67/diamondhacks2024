@@ -9,9 +9,21 @@ const SubmitTicket = () => {
     // const router =useRouter();
 
     const [buildingName, setBuildingName] = useState('');
+    const [address, setAddress] = useState('');
+    const [checkBoxes, setCheckBoxes] = useState({});
+    const[issues,setIssues] =useState('');
+
+
+    const handleCheckBoxesChange = (e) =>{
+        const{name, checked} = e.target;
+        setCheckedItems({ ...checkBoxes,[name]: checked});
+    }
 
     const handleBuildingNameChange = (e) =>{
         setBuildingName(e.target.value);
+    }
+    const handleAddressChange = (e) =>{
+        setAddressName(e.target.value);
     }
 
     const handleSubmit = (e) => {
@@ -33,45 +45,70 @@ const SubmitTicket = () => {
                     value={buildingName}
                     // onChange={(e)=> setBuildingName(e.target.value)}
                     onChange ={handleBuildingNameChange}
+                    
                 />
-                <button type ="submit">Submit</button>
-            </form>
-
-            {/* <label>Blog title:</label>
+                <p>{'\n'}</p>
+                
+                <label>Address:</label>
                 <input
                     type="text"
                     required
-                    value={buildingName}
-                    onChange={(e)=> setBuildingName(e.target.value)}
-                /> */}
+                    value={address}
+                    // onChange={(e)=> setBuildingName(e.target.value)}
+                    onChange ={handleAddressChange}
+                />
+                <p>{'\n'}</p>
+                <h3>Submit all that Apply</h3> 
+                <p>{'\n'}</p>   
+                <input
+                    type="checkbox"
+                    id="checkbox1"
+                    name="Low-Slope Ramps"
+                    checked={checkBoxes.checkbox1 || false}
+                    onChange={handleCheckBoxesChange}
+                />
+                <label>Low-Slope Ramps</label>
+                <p>{'\n'}</p>   
+                <input
+                    type="checkbox"
+                    id="checkbox2"
+                    name="Power-assisted Doors"
+                    checked={checkBoxes.checkbox2 || false}
+                    onChange={handleCheckBoxesChange}
+                />
+                <label>Power-assisted Doors</label>
+                <p>{'\n'}</p>   
+                <input
+                    type="checkbox"
+                    id="checkbox3"
+                    name="Elevators"
+                    checked={checkBoxes.checkbox3 || false}
+                    onChange={handleCheckBoxesChange}
+                />
+                <label>Elevators</label>
+                <p>{'\n'}</p>   
+                <input
+                    type="checkbox"
+                    id="checkbox3"
+                    name="Accessible Washrooms"
+                    checked={checkBoxes.checkbox3 || false}
+                    onChange={handleCheckBoxesChange}
+                />
+                <label>Accessible Washrooms</label>
+                <p>{'\n'}</p>
+                <label>Issues:</label>
+                <textarea
+                    required
+                    value={issues}
+                    onChange={(e)=> setIssues(e.target.value)}
+                ></textarea>
+                <button type ="submit">Submit</button>
+            </form>
 
-            {/* <h2>Building Name: + {buildingName}</h2> */}
+            
+
         </main>
     );
 }
  
 export default SubmitTicket;
-// import { useState } from 'react';
-
-// const SubmitTicket = () => {
-//   const [inputValue, setInputValue] = useState('');
-
-//   const handleChange = (event) => {
-//     setInputValue(event.target.value);
-//   };
-
-//   return (
-//     <div>
-//       <label htmlFor="textInput">Enter text: </label>
-//       <input
-//         id="textInput"
-//         type="text"
-//         value={inputValue}
-//         onChange={handleChange}
-//       />
-//       <p>You entered: {inputValue}</p>
-//     </div>
-//   );
-// };
-
-// export default SubmitTicket;

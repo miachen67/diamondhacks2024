@@ -213,9 +213,26 @@ textarea {
   border: 2px solid #7D9C7B;
 }
 
+.paragraph {
+  /* margin-top: 20px;
+  text-align: left;
+  color: #0f240d;
+  border: 2px solid #7D9C7B; 
+  border-radius: 5px;
+  padding: 5px 9px; */
 
+  margin: 20px 250px;
+  text-align: left;
+  color: #0f240d;
+  border: 2px solid #7D9C7B; 
+  border-radius: 5px;
+  padding: 5px 9px;
+}
 
-.locations{
-  display: flex;
-  padding: 20px;
+#placeButton {
+  margin-top: 5px;
+  /* margin-left: 25%; */
+  transform: translateX(-50%, -50%);
+  font-size: 20px;
+  padding: 20px 50px;
 }

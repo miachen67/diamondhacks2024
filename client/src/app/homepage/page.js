@@ -6,7 +6,7 @@ const Homepage = () => {
     return (  
         <div className='content'>
           <h1 className='titleText'>Welcome to our Website!</h1>
-          <p> Our goal is to promote inclusivity and ensure safety for all 
+          <p className='paragraph'> Our goal is to promote inclusivity and ensure safety for all 
             individuals by providing comprehensive accessibility and safety assessments 
             of buildings and areas on the UCSD campus. Through this platform, users will 
             have the opportunity to submit safety and accessibility tickets for areas that 

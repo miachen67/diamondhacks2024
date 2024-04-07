@@ -17,14 +17,14 @@ const SubmitTicket = () => {
 
     const handleCheckBoxesChange = (e) =>{
         const{name, checked} = e.target;
-        setCheckedItems({ ...checkBoxes,[name]: checked});
+        setCheckBoxes({ ...checkBoxes,[name]: checked});
     }
 
     const handleBuildingNameChange = (e) =>{
         setBuildingName(e.target.value);
     }
     const handleAddressChange = (e) =>{
-        setAddressName(e.target.value);
+        setAddress(e.target.value);
     }
 
     const handleSubmit = (e) => {
@@ -35,7 +35,7 @@ const SubmitTicket = () => {
         // router.push
     }
     return ( 
-        <main>
+        <main class="submitTicketWrapper">
             <h1 className="headingBox">Submit a new ticket</h1>
 
             <form onSubmit={handleSubmit}>

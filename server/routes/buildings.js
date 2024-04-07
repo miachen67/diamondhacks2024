@@ -3,7 +3,9 @@ const express = require('express');
 const{
   getBuilding,
   getBuildings,
-  createBuilding
+  createBuilding,
+  deleteBuilding,
+  updateBuilding
 } = require('../controllers/buildingControllers')
 const router = express.Router();
 
@@ -17,13 +19,9 @@ router.get('/:id', getBuilding);
 router.post('/', createBuilding);
 
 //delete a building
-router.delete('/:id', (req, res) => {
-  res.json({mssg: "DELETE a new workout"})
-});
+router.delete('/:id', deleteBuilding);
 
 //update a building
-router.patch('/:id', (req, res) => {
-  res.json({mssg: "UPDATE a workout"})
-});
+router.patch('/:id', updateBuilding);
 
 module.exports = router;

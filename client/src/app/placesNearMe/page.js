@@ -2,8 +2,22 @@
 
 import ToggleView from "../components/ToggleView";
 import Locations from "../components/Locations";
+import {useEffect, useState} from 'react'
 
 const PlacesNearMe = () => {
+
+    const[buildings, setBuildings] = useState (null)
+    useEffect(() =>{
+        const fetchBuildings = async () =>{
+            const response = await fetch('/api/buildings')
+            const json = await response.json()
+
+            if (response.ok){
+                setBuildings(json)
+            }
+        }
+        fetchBuildings()
+    }, [])
     return (  
         <div>
             <ToggleView  />
@@ -15,6 +29,11 @@ const PlacesNearMe = () => {
             rating = {"⭐⭐⭐⭐"}
             specialFeatures = {"Ramps, elevators"}
             />
+            <div className ="buildings">
+                {buildings && buildings.map((building) => (
+                    <p key = {building._id}>{building.buildingName}</p>
+                ))}
+            </div>
         </div>
     );
 }

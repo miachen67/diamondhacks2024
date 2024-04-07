@@ -252,3 +252,8 @@ textarea {
   width: 75px;
   padding: 10px;
 }
+
+.submitTicketButtonsWrapper{
+  display: flex;
+  flex-direction: column;
+}

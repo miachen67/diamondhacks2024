@@ -5,7 +5,7 @@ const PlacesNearMeButton = () => {
         <main>
             <Link href = "/placesNearMe">
                 {/* <a>submitTicket/page.js</a> */}
-                <button>Places Near Me</button>
+                <button className='button' id='centerButton'>Places Near Me</button>
                 {/* <a className ="button">Go to another Page</a> */}
             </Link>
         </main>

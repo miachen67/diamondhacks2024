@@ -1,9 +1,11 @@
 *{
   margin: 0;
+  --brightGreen: #D2E64F;
+  --lightGreen:  #F2F5DE;
 }
 
 body{
-  background-color: #F2F5DE;
+  background-color: var(--lightGreen);
 }
 
 .button{
@@ -58,7 +60,7 @@ label {
 .locationCard{
   width: 300px;
   height: 400px;
-  background-color: #D2E64F;
+  background-color: var(--brightGreen);
   border-radius: 20px;
   padding-top: 20px;
   padding-left: 30px;

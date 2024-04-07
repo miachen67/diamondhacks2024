@@ -11,7 +11,7 @@ const PlacesNearMe = () => {
             <Locations 
             img = {'public/next.svg'} 
             locationName = {"CSE Building"} 
-            rating = {"5/5"}
+            rating = {"⭐⭐⭐⭐"}
             specialFeatures = {"Ramps, elevators"}
             />
         </div>

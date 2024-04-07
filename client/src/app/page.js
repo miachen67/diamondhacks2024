@@ -10,7 +10,8 @@ export default function Home() {
       <div className='content'>
         <h1>Welcome to our Website!</h1>
         <h3>~Keerthi, Mia, Preity~</h3>
-        <SubmitTicketButton />
+          <SubmitTicketButton />
+        
       </div>
       
     </main>

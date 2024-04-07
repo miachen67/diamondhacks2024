@@ -177,6 +177,10 @@ textarea {
 #ticketSubmit {
   display: block;
 }
+
+.oneCheckbox{
+  margin-bottom: 10px;
+}
 /*end submit ticket page*/
 
 

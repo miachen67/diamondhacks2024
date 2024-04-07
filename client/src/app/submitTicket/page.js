@@ -63,48 +63,71 @@ const SubmitTicket = () => {
 
                 <h3 className="headingBox2">Click all that Apply:</h3> 
 
-                <input
-                    type="checkbox"
-                    id="checkbox1"
-                    name="Low-Slope Ramps"
-                    checked={checkBoxes.checkbox1 || false}
-                    onChange={handleCheckBoxesChange}
-                />
-                <label className="ticketLabel" id="smaller">Low-Slope Ramps</label>
-
-                <input
-                    type="checkbox"
-                    id="checkbox2"
-                    name="Power-assisted Doors"
-                    checked={checkBoxes.checkbox2 || false}
-                    onChange={handleCheckBoxesChange}
-                />
-                <label className="ticketLabel" id="smaller">Power-assisted Doors</label>
-              
-                <input
-                    type="checkbox"
-                    id="checkbox3"
-                    name="Elevators"
-                    checked={checkBoxes.checkbox3 || false}
-                    onChange={handleCheckBoxesChange}
-                />
-                <label className="ticketLabel" id="smaller">Elevators</label>
+                <div className="oneCheckbox">
+                    <input
+                        type="checkbox"
+                        id="checkbox1"
+                        name="Low-Slope Ramps"
+                        checked={checkBoxes.checkbox1 || false}
+                        onChange={handleCheckBoxesChange}
+                    />
+                    <label className="ticketLabel" id="smaller">Low-Slope Ramps</label>
+                </div>
+                
+                <div className="oneCheckbox">
+                    <input
+                        type="checkbox"
+                        id="checkbox2"
+                        name="Power-assisted Doors"
+                        checked={checkBoxes.checkbox2 || false}
+                        onChange={handleCheckBoxesChange}
+                    />
+                    <label className="ticketLabel" id="smaller">Power-assisted Doors</label>
+                </div>
+                
+                <div className="oneCheckbox">
+                    <input
+                        type="checkbox"
+                        id="checkbox3"
+                        name="Elevators"
+                        checked={checkBoxes.checkbox3 || false}
+                        onChange={handleCheckBoxesChange}
+                    />
+                    <label className="ticketLabel" id="smaller">Elevators</label>
+                </div>
                    
-                <input
-                    type="checkbox"
-                    id="checkbox3"
-                    name="Accessible Washrooms"
-                    checked={checkBoxes.checkbox3 || false}
-                    onChange={handleCheckBoxesChange}
-                />
-                <label className="ticketLabel" id="smaller">Accessible Washrooms</label>
+                <div className="oneCheckbox">
+                    <input
+                        type="checkbox"
+                        id="checkbox3"
+                        name="Accessible Washrooms"
+                        checked={checkBoxes.checkbox3 || false}
+                        onChange={handleCheckBoxesChange}
+                    />
+                    <label className="ticketLabel" id="smaller">Accessible Washrooms</label>
+                </div>
                 
                 <label className="ticketLabel" id="smaller">Issues:</label>
-                <textarea
+                <input
                     required
                     value={issues}
                     onChange={(e)=> setIssues(e.target.value)}
-                ></textarea>
+                    class="ticketInput"
+                ></input>
+
+                {/* <div className="form-group">
+                    <label className="ticketLabel">Building Name:</label>
+                    <input
+                    type="text"
+                    required
+                    value={issues}
+                    onChange={handleBuildingNameChange}
+                    className="ticketInput"
+                    />
+                </div> */}
+
+
+
                 <button type ="submit" className="button" id="ticketSubmit">Submit</button>
             </form>
 

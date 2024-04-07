@@ -7,6 +7,7 @@ const{
   deleteBuilding,
   updateBuilding
 } = require('../controllers/buildingControllers')
+
 const router = express.Router();
 
 /* GET all buildings. */

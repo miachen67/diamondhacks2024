@@ -11,7 +11,7 @@ const PlacesNearMe = () => {
 
     useEffect(() =>{
         const fetchBuildings = async () => {
-            const response = await fetch('http://localhost:4000/api/buildings');
+            const response = await fetch('/api/buildings');
             const json = await response.json();
 
             if (response.ok){
@@ -31,10 +31,12 @@ const PlacesNearMe = () => {
             rating = {"⭐⭐⭐⭐"}
             specialFeatures = {"Ramps, elevators"}
             />
+
             <div className ="buildings">
                 {buildings && buildings.map((building) => (
-                    <BuildingDetails key={building._id} building ={building} />
-                    // <p key = {building._id}>{building.buildingName}</p>
+                    console.log(building.buildingName)
+                    //<BuildingDetails key={building._id} building ={building} />
+                    //<p key={building._id}> {building.buildingName} </p>
                 ))}
             </div>
         </div>

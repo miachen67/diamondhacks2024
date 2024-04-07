@@ -1,12 +1,19 @@
 'use client';
 
 import ToggleView from "../components/ToggleView";
+import Locations from "../components/Locations";
 
 const PlacesNearMe = () => {
     return (  
-        <main>
+        <div>
             <ToggleView onClick={() => console.log("Button clicked!")} />
-        </main>
+            <h1>Places Near You</h1>
+            <Locations 
+            img = {'public/next.svg'} 
+            locationName = {"CSE Building"} 
+            rating = {"5/5"}
+            />
+        </div>
     );
 }
  

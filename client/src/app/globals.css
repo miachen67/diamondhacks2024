@@ -5,8 +5,51 @@ body{
 .button{
   background-color: #D2E64F;
   border-radius: 15px;
-  border-color: rgb(73, 204, 73);
 }
+
+/*TOGGLE VIEW CSS*/
+.toggle{
+  background: lightgray;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  display: inline-block;
+  padding: 20px 0;
+  position: relative;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+label {
+  width: 150px;
+  display: inline-block;
+  text-align: center;
+  z-index: 5;
+  position: relative;
+  cursor: pointer;
+}
+
+.selector{
+  height: 55px;
+  width: 150px;
+  background: #D2E64F;
+  border-radius: 30px;
+  position: absolute; 
+  top: 2px;
+  left: 2px;
+  z-index: 1;
+  transition: left .25s ease-in-out;
+}
+
+.card-view:checked ~ .selector {
+  left: 2px;
+}
+
+.map-view:checked ~ .selector {
+  left: 150px; /*width of our label*/
+}
+/*end of toggle view button css*/
 
 .locationCard{
   width: 25vw;

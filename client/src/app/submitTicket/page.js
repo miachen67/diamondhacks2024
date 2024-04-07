@@ -35,18 +35,32 @@ const SubmitTicket = () => {
     }
     return ( 
         <main>
-            <h1>Submit a new ticket</h1>
-            {/* <SubmitTicketButton /> */}
+            <div className="heading-textbox-container">
+                <h1>Submit a new ticket</h1>
+            </div>
             <form onSubmit={handleSubmit}>
-                <label>Building Name:</label>
-                <input
+                <div className="form-text">
+                    <label>Building Name:</label>
+                </div>
+                <div className="textbox-container">
+                    <input
+                        type="text"
+                        required
+                        value={buildingName}
+                        // onChange={(e)=> setBuildingName(e.target.value)}
+                        onChange ={handleBuildingNameChange}
+                        style={{ backgroundColor: 'transparent',border:"transparent", outline:"none" }}
+                        
+                    />
+                </div>
+                {/* <input
                     type="text"
                     required
                     value={buildingName}
                     // onChange={(e)=> setBuildingName(e.target.value)}
                     onChange ={handleBuildingNameChange}
                     
-                />
+                /> */}
                 <p>{'\n'}</p>
                 
                 <label>Address:</label>

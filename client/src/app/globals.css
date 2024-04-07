@@ -90,3 +90,28 @@ label {
   border-radius: 10px;
   height: 50px;
 }
+
+.heading-textbox-container {
+  margin-top: 20px;
+  margin-left: 10px;
+  width: 300px;
+  height: 30px;
+  background-color: #7D9C7B; 
+  padding: 20px; 
+  border-radius: 20px; 
+}
+.textbox-container{
+  margin-left:20px;
+  width: 300px;
+  margin-top:6px;
+  height: 30px;
+  background-color:#7D9C7B;
+  border-radius: 20px;
+  /* padding:20px; */
+  /* margin-left:20px; */
+}
+
+.form-text{
+  margin-top:10px;
+  
+}

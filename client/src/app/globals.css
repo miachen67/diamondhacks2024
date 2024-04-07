@@ -246,3 +246,9 @@ textarea {
   font-size: 20px;
   padding: 20px 50px;
 }
+
+#homeButton {
+  margin-top: 15px;
+  width: 75px;
+  padding: 10px;
+}

@@ -7,6 +7,7 @@ import BuildingDetails from '../components/BuildingDetails'
 import csebuilding from '../../../public/cse-building.jpg'
 import fah from '../../../public/FAH.jpg'
 import bistro from '../../../public/bistro.jpg'
+import Link from 'next/link';
 
 const PlacesNearMe = () => {
 
@@ -58,6 +59,10 @@ const PlacesNearMe = () => {
                     //<p key={building._id}> {building.buildingName} </p>
                 ))}
                 </div>*/}
+
+            <Link href = "/homepage">
+            <button className='button' id="homeButton">Home</button>
+            </Link>
         </div>
     );
 }

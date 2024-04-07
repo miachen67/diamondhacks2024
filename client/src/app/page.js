@@ -7,7 +7,8 @@ import SubmitTicketButton from "@/app/components/SubmitTicketButton";
 export default function Home() {
   return (
     <main>
-      <h1>Hello World</h1>
+      <h1>Welcome to our Website!</h1>
+      <h3>~Keerthi, Mia, Preity~</h3>
       <SubmitTicketButton />
     </main>
   )
